@@ -48,7 +48,10 @@ const webpackConfig = merge(baseWebpackConfig, {
     }),
     new MiniCssExtractPlugin(
       {
-        filename: '[name]/style.[contenthash:8].css'
+        filename: '[name]/style.[contenthash:8].css',
+        chunkFilename: ({chunk}) => {
+          return `${chunk.runtime}/[id].[contenthash:8].css`
+        }
       }
     ),
     // new CleanWebpackPlugin(),
