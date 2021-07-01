@@ -73,7 +73,7 @@ const webpackConfig = merge(baseWebpackConfig, {
           format: null,
           toplevel: false,
           nameCache: null,
-          ie8: true,
+          ie8: false,
           keep_classnames: undefined,
           keep_fnames: false,
           safari10: true,
