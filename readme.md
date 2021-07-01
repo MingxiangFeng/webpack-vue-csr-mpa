@@ -1,4 +1,5 @@
 # 特性
+- 多页架构
 - 需要基本环境依赖：npm >= 5.28.0 node >= 10.13.0
 - vue单页应用路由暂不支持history模式，只能使用hash模式
 - 安装了@vue/composition-api，以支持vue3.x语法
