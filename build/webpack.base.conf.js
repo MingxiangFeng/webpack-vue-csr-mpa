@@ -4,7 +4,7 @@ const webpack = require('webpack');
 const glob = require('glob')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const { VueLoaderPlugin } = require('vue-loader')
 const fs = require('fs')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
@@ -90,7 +90,7 @@ module.exports = {
   resolve: {
     extensions: ['*', '.js', '.vue', '.json'],
     alias: {
-      'vue$': 'vue/dist/vue.runtime.js',
+      'vue$': 'vue/dist/vue.runtime.esm-bundler.js',
       '@': path.join(__dirname, '../src'),
     }
   },
