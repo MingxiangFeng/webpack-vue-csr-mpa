@@ -54,7 +54,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     })      
   ],
   devServer: {
-    host: '0.0.0.0',
+    host: 'localhost',
     contentBase: './dist',
     hot: true,
     stats: 'errors-only',

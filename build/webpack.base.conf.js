@@ -52,7 +52,8 @@ const setMPA = () => {
         }
       }
 
-      entry[pageName] = entryPath;
+      entry[pageName] = process.env.NODE_ENV === 'production'  ? ['babel-polyfill', entryPath] : entryPath;
+      // entry[pageName] = entryPath
 
       htmlWebpackPlugins.push(
         new HtmlWebpackPlugin({
